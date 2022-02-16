@@ -1,20 +1,22 @@
 {
-  "roles": {
-    "realm" : [{
-        "name": "user"
-     }]
-  },
-
-  "users": [{
-    "username" : "user",
-    "enabled": true,
-    "credentials" : [{ 
-      "type" : "password",
-      "value" : "password" 
-    }],
-    "realmRoles": ["user"],
-    "clientRoles": {
-      "account": ["view-profile", "manage-account"]
-    }
-  }]
+     "realm": "sample",
+     "users": [
+           {
+               "username" : "bsample@sample.org",
+               "enabled" : true,
+               "totp" : false,
+               "emailVerified" : false,
+               "firstName" : "bob",
+               "lastName" : "sample",
+               "email" : "bsample@sample.org",
+               "credentials" : [ ],
+               "disableableCredentialTypes" : [ ],
+               "requiredActions" : ["UPDATE_PASSWORD","VERIFY_EMAIL" ],
+               "realmRoles" : [ "user", "offline_access", "uma_authorization" ],
+               "clientRoles" : {
+                 "account" : [ "manage-account", "manage-account-links", "view-profile" ]
+               },
+               "groups": ["name1", "name2"]
+             }
+       ]
 }
